@@ -1,23 +1,27 @@
 
+// buttony strona login
 
-
-.container-main{
-	padding-top: 42px;
+.login-form button{
+  text-transform: uppercase;
+  @include size(119px, 30px);
+  @include borderRadiusSingle(3px);	
+  line-height: 5px;
+  @include basicTransition;
+	  
 }
 
-.login-content{
-	background: #13bdd2;
-	border-radius: 5px;
-	padding: 40px 30px;
+.login-first-button{
+	margin-right: 5px;
+	background: $main-color;
+		
 }
 
-.photo-login{
-	width: 95px;
-	height: 95px;
-	border-radius: 50%;
-	background: $white;
-	margin-top: 90px;
+.login-second-button{
+	background: $second-button-color;
+	color: $secondary-text-color;
 }
+
+
 
 
 

@@ -1,1 +1,46 @@
-$main-color: #F00;
+//zmienne text
+$basic-font-size: 15px;
+$basic-line-height: 24px;
+$margin-paragraph: 0 0 15px;
+
+
+//mixin nagłowki
+
+@mixin headerSet($header-font-size,$header-margin-bottom,$header-color:$basic-header-color){
+	font-size: $header-font-size;
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: $header-margin-bottom;
+	color: $header-color;
+	font-weight: 300;
+
+}
+
+//font-family
+
+$font-family-primary: 'Roboto Condensed', sans-serif;
+
+
+//style tekstu
+
+body{
+	font-size: $basic-font-size;
+	font-family: $font-family-primary;
+	color: $basic-text-color;
+}
+
+p{
+	margin: $margin-paragraph;
+	line-height: $basic-line-height;
+
+}
+
+h1{
+	@include headerSet(40px,13px);
+}
+
+
+
+
+

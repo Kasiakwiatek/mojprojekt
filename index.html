@@ -7,62 +7,72 @@
     <title>Foundation for Sites</title>
     <link rel="stylesheet" href="scss/foundation.css">
     <link rel="stylesheet" href="css/app.css">
-     <style>
-    .red {
-      background: #ffcccc;
-      height: 250px;
-      outline: 1px solid #ff7777;
-    }
-    .top-row {
-      margin-bottom: 30px;
-    }
-    </style>
+     <!-- Ikony -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+    <!-- google font -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    
+   
   </head>
   <body>
     <!-- zawartość całej strony -->
-    <div class="container login-background">
+    <div class="main-container">
       
         <div class="row">
 
           <!-- kolumna z logo -->
-          <div class="small-12 medium-2 medium-offset-1 columns" style="background:red">
-            <div class="small-12 medium-2 medium-offset-1 columns" >
+          <div class="small-12 medium-2 medium-offset-1 columns">
+            <div class="logo" >
               <a href="index.html" alt="logo"><img src="img/logo.png" alt="logo"></a>
             </div>
           </div>
 
           <!-- kolumna z blokiem logowania -->
 
-          <div class="small-12 medium-6 large-6 columns end" style="background:yellow">
-             <div class="login-content">
-              <div class="login-header">
-                <h1 class="text-center login-header">Login</h1>
-                <p class="text-center login-text">Aby, zaimportować dane zaloguj się do swojego banku</p>
+          <div class="small-12 medium-6 columns end" >
+             
+              <div class="login-content text-center">
+                <!-- nagłowek -->
+                <div class="login-header-content">
+                  <h1 class="login-header">Login</h1>
+                  <p class="login-text">Aby, zaimportować dane zaloguj się do swojego banku</p>
+                </div>
+
+                <!-- div na avatar i formularz -->
+                <div class="avatar-and-form-content ">
+                  <!-- div na avatar -->
+                  <div class="avatar"></div>
+                 
+                  <!-- formularz -->
+                  <form action="" class="login-form">
+                      <span class="id-number">127633223 </span>
+                      <i class="fa fa-times close-icon" aria-hidden="true"></i>
+                      <div class="password-form clearfix">
+                        <input type="password" name="hasło" class="float-left" >
+                        <i class="fa fa-keyboard-o" aria-hidden="true" class="float-right"></i>
+                      </div>
+                      
+                      <button class="button login-first-button">Select other</button><button class="button login-second-button">Go</button></span>
+                  </form>
+                </div> 
               </div>
-              <!-- div na avatar -->
 
-              <div class="avatar float-center"></div>
-              <!-- formularz -->
-
-              <form action="" class="border">
-                  <span class="text-center id-number">127633223 </span><i class="fi-x-circle"></i>
-                  <input type="password" name="hasło" >
-                  <i class="fa fa-keyboard-o" aria-hidden="true"></i>
-                  <button class="button">Select other</button><button class="button">Go</button></span>
-              </form>
-             </div>
+             
 
               <!-- menu głowne -->
-              <nav>
+              <nav class="main-menu">
                 <a href="">Security</a>
                 <a href="">Login In</a>
-                <a href="">Login In</a>
+                <a href="">Contact</a>
               </nav>
           </div>
 
         </div>
     
-  </div>
+    </div>
 
     
         

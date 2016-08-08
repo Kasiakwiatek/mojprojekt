@@ -1,1 +1,42 @@
-$main-color: #F00;
+
+//wyrównanie w pionie
+
+@mixin centerVertical{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+//rozmiary
+
+@mixin size($width,$height){
+	width: $width;
+	height: $height;
+}
+
+
+
+//obramowanie
+
+@mixin sectionBorder ($border-color:$box-border-color){
+	border-width: 1px;
+	border-style: solid;
+	border-color: $border-color;
+
+}
+
+
+
+//narożniki
+
+@mixin borderRadiusSingle($radius){
+	border-radius: $radius;
+}
+
+//podstawowe przejście 0.4s
+
+@mixin basicTransition{
+	transition: all 0.4s ease-in-out;
+}
+

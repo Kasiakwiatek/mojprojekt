@@ -1,3 +1,69 @@
-.login-background{
-	background: red;
+
+
+.main-container{
+	padding: 100px 0 120px;
+	background: url('../img/tlo.jpg') no-repeat center center ;
+	background-size: cover;
+	
 }
+
+ .logo{
+ 	height: 200px;
+ 	@include breakpoint(small only) {
+ 		text-align: center;
+	}
+ }
+
+.login-content{
+	position: relative;
+	background: $main-color;
+	@include borderRadiusSingle(5px);
+	padding: 40px 30px;
+	.login-header-content{
+		padding-bottom: 90px;
+	}
+}
+
+
+
+
+
+.avatar-and-form-content{
+	position: relative;
+	width: 100%;
+	.avatar{
+		@include size(96px,96px);
+		@include borderRadiusSingle(50%);
+		background: $avatar-background;
+		position: relative;
+		margin: 0 auto -48px;
+	}
+	.id-number{
+		font-weight: 700;
+	}
+}
+
+
+
+.main-menu{
+ 	margin-top: 20px;	
+	a{
+	  font-weight: 700;
+	  color: $menu-link-color;
+	  margin-right: 20px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

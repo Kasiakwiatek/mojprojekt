@@ -1,4 +1,24 @@
 
+// formularz strona login
+
+.login-form{
+	padding: 80px 20px 60px 25px;
+	@include sectionBorder;
+	@include borderRadiusSingle(5px);
+}
+
+.password-form{
+	padding-top: 20px;
+	input{
+		width: 92%;
+		box-shadow:0 2px 0px $input-shadow inset;
+		@include borderRadiusSingle(3px);
+		@include breakpoint(medium down) {
+			width: 100%;
+		}
+	
+	}
+}
 
 
 

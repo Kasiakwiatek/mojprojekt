@@ -1,3 +1,22 @@
 
 
+// ikony strona login
+
+.close-icon{
+	background: #42cadb; 
+	@include size(17px,17px);
+	@include borderRadiusSingle(50%);
+}
+
+//ikona keyboard
+
+.password-form i{
+	font-size: 20px;
+  	line-height: 34px;
+  	@include breakpoint(medium down) {
+		width: 100%;
+		padding: 10px 0 15px;
+	}
+}
+
 
