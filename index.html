@@ -48,14 +48,20 @@
                  
                   <!-- formularz -->
                   <form action="" class="login-form">
-                      <span class="id-number">127633223 </span>
+                      <span class="id-number" name="login">127633223 </span>
                       <i class="fa fa-times close-icon" aria-hidden="true"></i>
                       <div class="password-form clearfix">
-                        <input type="password" name="hasło" class="float-left" >
+                        <input type="password" name="hasło" id="my-input" class="float-left" >
                         <i class="fa fa-keyboard-o" aria-hidden="true" class="float-right"></i>
                       </div>
+                      <div id="validation" class="float-left">
+                        <div id="icon-warning">
+                        </div>
+                      </div>
                       
-                      <button class="button login-first-button">Select other</button><button class="button login-second-button">Go</button></span>
+                      <button class="button login-first-button" >Select other</button>
+                      <button class="button login-second-button" id="button-go">Go</button></span>
+
                   </form>
                 </div> 
               </div>

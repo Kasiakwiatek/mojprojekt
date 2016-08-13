@@ -19,6 +19,21 @@
 	
 	}
 }
+//walidacja
+
+#validation {
+	width: 92%;
+	background: #FF4C58;
+	font-size: 13px;
+	margin-bottom: 15px;
+	@include breakpoint(medium down) {
+ 		width: 100%;
+	}
+}
+
+#icon-warning{
+	display: none;
+}
 
 
 
