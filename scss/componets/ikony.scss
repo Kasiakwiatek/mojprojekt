@@ -1,7 +1,5 @@
 
-
-// ikony strona login
-
+// ikona zamknięcia
 .close-icon{
 	background: #42cadb; 
 	@include size(17px,17px);
@@ -9,7 +7,6 @@
 }
 
 //ikona keyboard
-
 .password-form i{
 	font-size: 20px;
   	line-height: 34px;
@@ -19,4 +16,25 @@
 	}
 }
 
-
+//klasa która dodaje ikonę check do pojedyńczgeo boksa
+.checked{
+	.single-box-inner{
+		&:after{
+			@include blue-flap(0% !important);
+				}
+		.icon-wrapper{
+			padding-left: 7px;
+			padding-top: 6px;
+			.number-of-percent{
+				display: none;
+				}
+			i{
+				font-size: 51px;
+				}
+			}
+				
+		.text-wrapper-bottom{
+	       		padding-top: 70px !important;
+	       	}
+		}
+	}

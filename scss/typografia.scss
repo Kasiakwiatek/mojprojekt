@@ -5,7 +5,6 @@ $margin-paragraph: 0 0 15px;
 
 
 //mixin nagłowki
-
 @mixin headerSet($header-font-size,$header-margin-bottom,$header-color:$basic-header-color){
 	font-size: $header-font-size;
 	margin-top: 0;
@@ -18,16 +17,29 @@ $margin-paragraph: 0 0 15px;
 }
 
 //font-family
-
 $font-family-primary: 'Roboto Condensed', sans-serif;
 
 
 //style tekstu
-
 body{
 	font-size: $basic-font-size;
 	font-family: $font-family-primary;
 	color: $basic-text-color;
+}
+
+.dashborad-container, .gamification-container{
+	color: $black-color;
+	h2{
+		@include headerSet(17px,11px,$black-color);
+		@include breakpoint(small only) {
+ 					text-align: center;
+	       			}
+	}
+	.one-section{
+		p > span {
+			font-weight: bold;
+		}
+	}
 }
 
 p{
@@ -39,8 +51,3 @@ p{
 h1{
 	@include headerSet(40px,13px);
 }
-
-
-
-
-

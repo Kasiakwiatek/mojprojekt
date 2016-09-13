@@ -1,6 +1,5 @@
 
-// buttony strona login
-
+// button login
 .login-form button{
   text-transform: uppercase;
   @include size(119px, 30px);
@@ -10,18 +9,71 @@
 	  
 }
 
-.login-first-button{
+.blue-button{
 	margin-right: 5px;
 	background: $main-color;
 		
 }
 
-.login-second-button{
+.white-button{
 	background: $second-button-color;
 	color: $secondary-text-color;
 }
 
+.grey-button{
+  background: $medium-grey;
+}
 
+.section-button{
+  text-transform: uppercase;
+  @include borderRadiusSingle(1px);	
+  line-height: 5px;
+  @include basicTransition;
+	  
+}
 
+//button w formie kłódki
+.lock-button{
+          position: absolute;
+          right: 15px;
+          top: 6px;
+          float: right;
+          img{
+            @include size(16px,20px);
+          }
+        }
 
-
+//button on-off
+.switch{
+      color: $black-color;
+      font-weight: 300;
+      @include breakpoint(medium down) {
+        width: 100%;
+      }
+      .switch-paddle{
+        padding: 16px 0;
+                width: 75px;
+        background: $white-color;
+        @include borderRadiusSingle(3px);
+        .switch-active{
+          background: $light-green-color;
+          padding-right: 5px;
+          padding-left: 5px;
+        }
+        .switch-inactive{
+          height: 30px;
+          padding-right: 0;
+                    
+        }
+    }
+}
+//kontener na buttony
+.btn-wrapper{
+    //padding-left: 84px;
+    @include breakpoint(medium down) {
+          padding-left: 0;
+           span, button {
+            width: 100%;
+          }
+        }
+      }

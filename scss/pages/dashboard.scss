@@ -1,215 +1,163 @@
 
-.dashborad-container {
+.primary-container {
 	width: 100%;
 	background: $grey-background-color;
 }
 
-header {
-	max-width: 100%;
-	background: $main-color;
-	height: 120px;
+.one-section{
+	padding: 30px 0 40px;
+	color: $black-color;
 	@include breakpoint(small only) {
-		height: auto;
+		    text-align: center;
+		}
+	h1{
+		@include headerSet(45px,20px,$black-color);
 	}
-	.header-data-content{
-	padding-top: 25px;
+	span, p{
+		font-size: 25px;
 	}
-}
-
-//zdjęcie logo i avatara
-.logo_avatar {
-	img{
-		@include size(80px,80px);
-		@include breakpoint(medium only) {
- 					 @include size(45px,45px);
-	       			}
-	    @include breakpoint(small only) {
- 					 @include size(70px,70px);
-	       			}
-	}
-}
-
-
-//ikona koperty i trybika, dane użytkownika
-.dashborad-name-and-icons {
-  		position: relative;
-	   p {
-			 font-size: 20px;
-			 @include breakpoint(medium only) {
-			 font-size: $basic-font-size;		
-		  	}
-	   	}
-	   i {
-		  margin-right: 10px;
-		  font-size: 17px;
-		  cursor: pointer;
-	   	 }
-
-	   	// trybik obroty
-	   .fa-cog{
-	   	 	@include secondTransition;
-	   	 &:hover{
-	   	 	-ms-transform: rotate(360deg) scale(2,2); /* IE 9 */
-		    -webkit-transform: rotate(360deg) scale(2,2); /* Chrome, Safari, Opera */
-		    transform: rotate(360deg) scale(2,2);
-		    color: $second-pink-color;
-		    padding-left: 6px;
-
-	   	 }
-	   }
-
-}
-
+.btn-wrapper{
+	margin-top: 30px;
+	span{
+			padding-right: 10px;
+			font-size: 16px;
+			vertical-align:6px;
+		}	
 	
-	   
-   //alert z ilością wiadomości nad kopertą
-   .amount-of-messages-wrapper{
-   	 @include size(21px,21px);
-   	 background: $second-pink-color;
-   	 position: absolute;
-   	 top: 29px;
-	 left: 7px;
-   	 text-align: center;
-   	 opacity: 0;
-   	 @include borderRadiusSingle(50%);
-   	 @include secondTransition;
-   	 .amount-of-messages{
-   	 	color: $white-color;
-   	 	font-weight: bold;
-   	 	padding: auto 0;
-   	 }
-   }
+	.btn-top{
+		padding-left: 66px;
+		@include breakpoint(medium down) {
+					padding-left: 0;
+ 					 span, button {
+ 					 	width: 100%;
+ 					 	padding-left: 0;
+ 					 }
+				}
+			}
+		}
+	
 
-   //koperta efekt hover
-	   		
-	.amount-of-messages-wrapper{
-	   &:hover {
-	   	opacity: 1;
-	   }
+	.btn-bottom {
+		padding: 15px 5px 15px 57px;
+		@include breakpoint(medium down) {
+ 			padding-left: 0;
+ 			padding-right: 0;
+ 			text-align: center;
+	       	}
+		.text_container{
+			@include breakpoint(medium down) {
+				width: 100%;
+				span{
+					padding-right: 0;
+		   		}
+			}
+
+		}
+
 	}
 
-   // okno modalne wiadomość
-   .reveal{
-   	-moz-box-shadow: 5px 5px 3px rgba(0,0,0,0.5);
-	-webkit-box-shadow: 5px 5px 3px rgba(0,0,0,0.5);
-	box-shadow: 5px 5px 3px rgba(0,0,0,0.5);
-	   }
-   .message-wrapper{
-   	
-   		.message-modal-paragraph {
-   			padding: 10px 0 0 10px;
-   			color: $black-color !important;
-   		}
-   		.message-modal-header{
-   			padding: 10px 0 5px 10px;
-   			color: $black-color  !important;
-   		}
+}
+.products-and-history-section{
+	 color: $black-color;
+	 padding: 30px 0;
+	.single-item-wrapper{
+		background: $white-color;
+		padding: 25px 71px 25px 40px;
+		margin-bottom: 20px;
+		@include borderRadiusSingle(2px);
+		}
 
-   }
-   		
-//nawigacja czyli menu główne
-.main-menu {
-	display: block;
-		ul{
-			margin: 0;
-			list-style: none;
-			li{
-				
-				display: block;
-				float: left;
-				@include breakpoint(small only) {
- 					 float: none;
-	       				}
-				a{
-					color: $basic-text-color;
-					padding: 23px 0px 79px 87px;
-					@include basicTransition;
-					@include breakpoint(medium only) {
- 					  	padding: 23px 0px 79px 53px;
-	       				}
-	       			@include breakpoint(small only) {
-	       			 	padding: 3px 0px 79px 100%;
-	       			
-	       				}
+	.blue-container {
+		background: $main-color;
+		padding: 25px 35px 25px 40px;
+		i{
+			font-size: 70px;
+			color:$white-color;
+		}
+	}
+
+	.products-second-column{
+		margin-top: 30px;
+		@include breakpoint(small only) {
+ 					  margin-top: 0;
+	       			}
+	       .pig-img{
+	       		padding-bottom: 19px;
+	      	}
+	       	.signal-img	{
+	       		padding-bottom: 9px;
+	       }	
+		}
+
+		.history-expenditure-wrapper{
+			background: $white-color;
+			overflow: auto;
+			height: 400px;
+			@include borderRadiusSingle(4px);
+			ul{
+				list-style-type: none;
+				margin-left: 0;
+
+			}
+			.history-single-item{
+				border-bottom: 1px solid $grey-background-color;
+				overflow: auto;
+				p{
 					margin: 0;
-					overflow: auto;
-					.half-of-circle-hover{
-						//display: none;
-						@include basicTransition;
-						opacity: 0;
-						background: $black-color;
-						@include size(20px,20px);
-						@include borderRadiusSingle(50%);
-						margin: 13px auto 0;
-
-
+				}	
+				
+				.date-history{
+					
+					text-align: center;
+					padding-top: 30px;
+				}
+				.local-and-category-wrapper{
+					padding: 20px 0 0 16px;
+					 @include breakpoint(medium only) {
+						padding: 20px 0 0 24px;
 					}
-				  	
-					  	&:hover{
-						  	background: $black-color;
-						  	.half-of-circle-hover{
-						  		//display: block;
-						  		opacity: 1;
-						  		}
-						}					
-		 					
-					  i{
-					  	color: $basic-text-color;
-					  	font-size: 23px;
-					  }
-					 
-				 	}
+					select{
+						border: none;
+						padding-left: 0;
+						margin-left: -4px;
+						font-size: $basic-font-size;
+						width: auto;
+						background-image: url("../img/arrow_down.png");
+						background-repeat: no-repeat;
+						background-size: 14px 8px;
+					}
 
 				}
-				
-			}
-		}
-
-
-
-.search-and-logoff-icon{
-	margin-top: 30px;
-	ul{
-
-		list-style-type: none;
-		margin: 0;
-		
-		li{
-			display: inline-block;
-			float: right;
-			@include breakpoint(small only) {
-			 	 width: 100%;
-                 text-align: center
-	    }
-			//pole wyszukiwarki
-
-			.input-search{
-				margin-top: 16px;
-				@include breakpoint(medium only) {
-					width: 140px;
-	    		}
-				
-			}
-
-			i{
-              	font-size: 23px;
-		        padding: 20px 16px;
-		        @include breakpoint(medium only) {
-					padding: 23px 8px;
-					font-size: 16px;
-
-	    		}
-			}
-			// ikona wylgowania
-			a .fa-power-off{
-					color: $pink-log-off-color;
-					border-left: 1px solid #64d4e1;
-					 @include breakpoint(small only) {
-						border: none;
-
-	    		}
+				.income-and-expenditures{
+					text-align: right;
+					padding-top: 26px;
+					padding-right: 13px;
+					.history-amount{
+						font-weight: bold;
+						color: $green-text-color;
+					}
+				}
 			}
 		}
 	}
+
+//scrollbar
+
+.history-expenditure-wrapper::-webkit-scrollbar-track
+{
+	border-radius: 4px;
+	background-color: $white-color;
 }
 
+.history-expenditure-wrapper::-webkit-scrollbar
+{
+    width: 10px;
+	border-radius: 4px;
+	
+}
+
+.history-expenditure-wrapper::-webkit-scrollbar-thumb
+{
+	background-color: $light-grey;
+	height: 100px;
+}

@@ -1,6 +1,5 @@
 
 // formularz strona login
-
 .login-form{
 	padding: 80px 20px 60px 25px;
 	@include sectionBorder;
@@ -19,9 +18,8 @@
 	
 	}
 }
-//walidacja
-
-#validation {
+//okienko z walidacją
+.validation_info {
 	width: 92%;
 	background: #FF4C58;
 	font-size: 13px;
@@ -31,12 +29,6 @@
 	}
 }
 
-#icon-warning{
-	display: none;
+.validation_border{
+	border: 2px solid #f3741f;
 }
-
-
-
-
-
-

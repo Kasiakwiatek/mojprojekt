@@ -1,0 +1,164 @@
+.gamification-section{
+	.btn-wrapper{
+		padding-left: 84px;
+			}
+		}
+.box-container{
+	ul{
+		margin: 0;
+		list-style: none;
+		li{
+			display: block;
+			float: left;
+			padding-right:11px;
+			padding-bottom: 11px;
+			@include breakpoint(small only) {
+ 					 width: 100%;
+	       			}
+			.single-box{
+				@include size(167px,167px);
+				@include borderRadiusSingle(3px);
+				@include breakpoint(small only) {
+ 					 margin: 0 auto;
+	       			}
+	       		
+	       		.number-of-percent{
+		       			font-size: 20px;
+		       			padding-left: 9px;
+	       			}
+	       		
+	       		.text-wrapper-bottom{
+	       			padding-top: 95px;
+	       			padding-bottom: 13px;
+	       			text-align: center;
+	       			span{
+	       				font-size: 17px;
+	       			}
+	       		}
+
+	       		&:hover{
+					opacity : 0.60;
+					filter : alpha(opacity=60);
+					box-shadow: 10px 10px 5px #888888;
+					-webkit-box-shadow: 10px 10px 5px #888888;
+	       		}
+	    
+			}
+
+			.single-box-inner{
+					position: relative;
+					z-index:0;
+					.single-box-content{
+					   	position: relative;
+						z-index:1;
+				   }
+			}
+			.inactive-box{
+				background-image: url("../img/tablet_search.png");
+                background-color: $white-color;
+                background-repeat: no-repeat;
+    			background-size: 85px 71px;
+   			 	background-position: center;
+   			 	.single-box-inner{
+					position: relative;
+					z-index:0;
+					&:after{
+						@include blue-flap(0%);
+					}
+				
+				}
+			}
+			.active-box{
+				color: $white-color;
+				font-size: 16px;
+				font-weight: 400;
+				.single-box-inner{
+					&:after{
+						@include borderRadiusSingle(4px);
+					}
+				}
+			}
+			.first-log{
+				background-image: url('../img/first-log.jpg');
+				@include boxBackgroundMix;
+				.single-box-inner{
+					&:after{
+						@include blue-flap(0%);
+					}
+				}
+			}
+			.savings-targets{
+				background-image: url('../img/savings-goals.jpg');
+				@include boxBackgroundMix;
+				.single-box-inner{
+					&:after{
+						@include secondTransition;
+						@include blue-flap(85%);
+					}
+				}
+				&:hover{
+					.single-box-inner{
+					&:after{
+						@include blue-flap(0%);
+
+						}
+					
+					}
+				}
+			}
+			.personal-settings{
+				background-image: url('../img/personal-settings.jpg');
+				@include boxBackgroundMix;
+				.single-box-inner{
+					&:after{
+						@include blue-flap(52%);
+					}
+				
+				}
+
+			}
+		}
+	}
+}
+.use-as-you-like-section{
+	padding: 30px 0;
+	.star-wrapper{
+			.stars{
+				float: right;
+				position: absolute;
+				right: 7px;
+				top: 2px;
+	       			img{
+						@include size(20px,20px);
+					}
+	       		}
+			}
+
+		.regular-log{
+				background-image: url('../img/regular-log.jpg');
+				@include boxBackgroundMix;
+				.single-box-inner{
+					&:after{
+						@include blue-flap(0%);
+				}
+			}
+		}
+
+		.smart-savings{
+				background-image: url('../img/smart-savings.jpg');
+				@include boxBackgroundMix;
+				.single-box-inner{
+						&:after{
+							@include blue-flap(36%);
+					}
+				}
+			}
+
+		.secend-inactive{
+			background-image: url("../img/grey-order.png") !important;
+			background-size: 58px 71px !important;
+			.star-wrapper{
+				overflow: auto;
+			}
+		}
+	}

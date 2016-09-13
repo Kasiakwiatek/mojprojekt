@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="pl">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -7,68 +7,67 @@
     <title>Foundation for Sites</title>
     <link rel="stylesheet" href="scss/foundation.css">
     <link rel="stylesheet" href="css/app.css">
-  
-     <!-- Ikony -->
+      <!-- Ikony -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
     <!-- font awsome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-
     <!-- google font -->
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    
-   
   </head>
   <body>
     <!-- zawartość całej strony -->
-    <div class="dashborad-container">
+    <div class="dashborad-container primary-container">
        <header>
         <div class="row medium-collapse">
           <!-- kolumna logo i avatara -->
-          <div class="small-12 medium-3 columns" >
+          <div class="small-12 medium-4 columns" >
             
-            <div class="header-data-content clearfix">
-              <!-- logo i avatar-->
-              <div class="logo_avatar float-left" >
-                <!-- logo -->
-                <a href="login.html" alt="logo"><img src="img/logo.png" alt="logo"></a>
-                <!-- avatar i tooltip -->
-                <span data-tooltip aria-haspopup="true" class="has-tip" title="Zdjęcie Jan Kowalski"><img src="img/avatar.jpg" alt="logo"></span>
-              </div>
-           
-              <!-- dane i ikony -->
-              <div class="dashborad-name-and-icons float-right" >
-                <p>Jan Kowalski</p>
-                <!-- ikona widomości -->
-                <i class="fa fa-envelope" aria-hidden="true" data-open="exampleModal1"></i>
-                <!-- alert z ilością wiadomości -->
-                <div class="amount-of-messages-wrapper">
-                  <span class="amount-of-messages">2</span>
-                </div>
-
-                <!-- wiadomości okno modalne -->
-                <div class="reveal" id="exampleModal1" data-reveal>
-                  <div class="message-wrapper">
-                    <h1 class="message-modal-header">Awesome. I Have It.</h1>
-                    <p class="message-modal-paragraph">Your couch. It is mine.</p>
-                    <p class="message-modal-paragraph">Widomość</p>
+            <div class="row">
+              <div class="header-data-content ">
+                <!-- logo i avatar-->
+                <div class="small-6 medium-4 large-7 columns clearfix">
+                  <div class="logo_avatar float-left" >
+                    <!-- logo -->
+                    <a href="login.html"><img src="img/logo.png" alt="logo" class="logo"></a>
+                    <!-- avatar i tooltip -->
+                    <span data-tooltip aria-haspopup="true" class="has-tip" title="Zdjęcie Jan Kowalski"><img src="img/avatar.jpg" alt="logo" class="avatar"></span>
                   </div>
-                  <button class="close-button" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
                 </div>
-                <!-- ikona trybika -->
-                <i class="fa fa-cog" aria-hidden="true"></i>
+              <!-- dane i ikony -->
+                <div class="small-6 medium-8 large-5 columns">
+                  <div class="dashborad-name-and-icons float-right" >
+                    <p>Jan Kowalski</p>
+                    <!-- ikona widomości -->
+                    <i class="fa fa-envelope" aria-hidden="true" data-open="exampleModal1"></i>
+                    <!-- alert z ilością wiadomości -->
+                    <div class="amount-of-messages-wrapper">
+                      <span class="amount-of-messages">2</span>
+                    </div>
+                    <!-- wiadomości okno modalne -->
+                    <div class="reveal" id="exampleModal1" data-reveal>
+                      <div class="message-wrapper">
+                        <h1 class="message-modal-header">Awesome. I Have It.</h1>
+                        <p class="message-modal-paragraph">Your couch. It is mine.</p>
+                        <p class="message-modal-paragraph">Widomość</p>
+                      </div>
+                      <button class="close-button" data-close aria-label="Close modal" type="button">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <!-- ikona trybika -->
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-
           <!-- menu -->
-          <div class="small-12 medium-offset-1 medium-4 columns">
+          <div class="small-12 medium-4 columns">
             <div class="nav-container text-center">
             <nav class="main-menu">
                 <ul>
                   <li>
-                    <a href="">
+                    <a href="dashboard.html">
                       <div class="icon-menu">
                         <i class="fa fa-home" aria-hidden="true"></i>
                       </div>
@@ -107,12 +106,10 @@
                       </div>
                     </a>
                   </li>
-                
                 </ul>
               </nav>
             </div>
           </div>
-
           <!-- div ikona wylogowania i wyszukiwania, pole wyszukiwarki -->
            <div class="small-12 medium-4 columns " >
             <div class="search-and-logoff-icon " >
@@ -136,22 +133,175 @@
             </ul>
            </div>
           </div>
-
         </div>
-
       </header>
-      <section>
-          dfjbgfghdvfbdsvfbcbc bzc bzc bc bc b  hfvhfhfhdh
-        </section>
+      <section class="finace-life-section one-section">
+          <div class="row">
+            <div class="small-12 medium-9 columns">
+              <h1>Finance life stream</h1>
+              <div class="row">
+                <div class="small-12 medium-4 columns" >
+                  <span>Balance</span>
+                  <p class="count-class balance"></p>
+                </div>
+                <div class="small-12 medium-4 columns">
+                  <span>Available founds</span>
+                  <p class="count-class funds"></p>
+                </div>
+                <div class="small-12 medium-4 columns">
+                  <span>Scheduled payments</span>
+                  <p class="count-class payments"></p>
+                </div>
+              </div>
+            </div>
+            <!-- przyciski -->
+            <div class="small-12 medium-3 columns">
+              <div class="btn-wrapper">
+                <div class="btn-top text-center">
+                  <span class="text_wrapper">Add</span>
+                  <button class="button blue-button section-button">Bank</button>
+                  <button class="button blue-button section-button">Payment</button>
+                </div>
+                <div class="btn-bottom clearfix">
+                  <!-- przycisk on off -->
+                  <div class="float-left text_container">
+                    <span class="text_wrapper">Accounts analysis</span>
+                  </div>
+                  <div class="switch float-right">
+                    <input class="switch-input" id="yes-no" type="checkbox" name="exampleSwitch">
+                    <label class="switch-paddle" for="yes-no">
+                      <span class="show-for-sr">Analizy włącz lub wyłącz</span>
+                      <span class="switch-active" aria-hidden="true">ON</span>
+                      <span class="switch-inactive" aria-hidden="true">OFF</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+           </div> 
+      </section>
+      <section class="chart-section">
+        <div class="row">
+          <div class="small-12 columns">
+            <img src="img/chart.jpg" alt="chart">
+          </div>
+        </div>
+      </section>
+      <section class="products-and-history-section">
+        <div class="row">
+          <!-- produkty -->  
+          <div class="small-12 medium-3 columns">
+            <!-- pierwsz kolumna produkty -->
+            <h2>Products</h2>
+            <div class="products-first-column">
+              <!-- pojedyńczy produkt -->
+              <div class="single-item-wrapper clearfix">
+                <div class="img-warpper float-left">
+                  <img src="img/wallet.png" alt="wallet">
+                </div>
+                <div class="content-warpper float-right">
+                  <span class="wallets-product">Wallets[3]</span>
+                  <p class="money-in-wallet">500.00 PLN</p>
+                </div>
+              </div>
+               <!-- pojedyńczy produkt -->
+              <div class="single-item-wrapper clearfix">
+                <div class="img-warpper float-left">
+                  <img src="img/money.png" alt="wallet">
+                </div>
+                <div class="content-warpper float-right">
+                  <span class="accounts-product">Accounts</span>
+                  <p class="money-on-account">7200.00 PLN</p>
+                </div>
+              </div>
+               <!-- pojedyńczy produkt -->
+              <div class="single-item-wrapper blue-container clearfix">
+                <div class="img-warpper float-left">
+                  <img src="img/hand-right.png" alt="hand-right">
+                </div>
+                <div class="content-warpper float-right">
+                  <span class="Bank-loans-product">Bank loans</span>
+                  <p class="amount-of-loan">- 127 000.00 PLN</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="small-12 medium-3 columns">
+            <!-- druga kolumna produkty -->
+            <div class="products-second-column">
+               <!-- pojedyńczy produkt -->
+              <div class="single-item-wrapper clearfix">
+                <div class="img-warpper float-left">
+                  <img src="img/pig-procent.png" class="pig-img" alt="pig-procent">
+                </div>
+                <div class="content-warpper float-right">
+                  <span class="deposit-product">Deposits[2]</span>
+                  <p class="amount-of-deposit">10 000.00 PLN</p>
+                </div>
+              </div>
+               <!-- pojedyńczy produkt -->
+              <div class="single-item-wrapper clearfix">
+                <div class="img-warpper float-left">
+                  <img src="img/signal.png" class="signal-img" alt="signal">
+                </div>
+                <div class="content-warpper float-right">
+                  <span class="funds-product">Founds[3]</span>
+                  <p class="amount-of-funds">7 000.00 PLN</p>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+          <!-- histora -->
+          
+          <div class="small-12 medium-6 columns">
+            <h2>History</h2>
+            <div class="history-expenditure-wrapper">
+               <ul class="history-list">
+                 <li class="row collapse history-single-item">
+                  
+                    <div class="small-2 columns">
+                      <div class="date-history">29.06</div>
+                    </div>
+                    <div class="small-8 columns local-and-category-wrapper">
+                      <p class="localization-history">Gas station</p>
+                      <p class="category-of-expenditure">Gas</p>
+                    </div>
+                    <div class="small-2 columns">
+                      <div class="income-and-expenditures">
+                        <span class="history-amount">- 100 </span><span class="history-currency">PLN</span>
+                      </div>
+                    </div>
+                  
+                </li>
+                <li class="row collapse history-single-item">
+                  
+                    <div class="small-2 columns">
+                      <div class="date-history">29.06</div>
+                    </div>
+                    <div class="small-8 columns local-and-category-wrapper">
+                      <p class="localization-history">Gas station</p>
+                      <p>
+                        <select>
+                          <option value="gas">Gas</option>
+                          <option value="food">Food</option>
+                          <option value="cash">Cash</option>
+                        </select>
+                      </p>
+                    </div>
+                    <div class="small-2 columns">
+                      <div class="income-and-expenditures">
+                        <span class="history-amount">- 100 </span><span class="history-currency">PLN</span>
+                      </div>
+                    </div>
+                   </li>
+                 </ul>
+               </div>
+             </div>
+      </section>
     </div>
 
-    
-        
-    
-
-
     <script src="bower_components/jquery/dist/jquery.js"></script>
-
     <script src="bower_components/what-input/what-input.js"></script>
     <script src="bower_components/foundation-sites/dist/foundation.js"></script>
     <script src="js/app.js"></script>

@@ -1,0 +1,528 @@
+<!doctype html>
+<html class="no-js" lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grywalizacja</title>
+    <link rel="stylesheet" href="scss/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+      <!-- Ikony -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <!-- google font -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <!-- zawartość całej strony -->
+    <div class="gamification-container primary-container">
+       <header>
+        <div class="row medium-collapse">
+          <div class="small-12 medium-4 columns" >
+            <div class="row">
+              <div class="header-data-content clearfix">
+                <div class="small-6  medium-4 large-7 columns">
+                  <div class="logo_avatar float-left">
+                    <!-- logo -->
+                    <a href="dashboard.html" title="Przekirowanie do strony dashboard">
+                      <img src="img/logo.png" alt="obrazek z logo" class="obrazek z logo">
+                    </a>
+                    <!-- avatar i tooltip -->
+                    <span data-tooltip aria-haspopup="true" class="has-tip" title="Zdjęcie Jan Kowalski"><img src="img/avatar.jpg" alt="obrazek z avatarem" class="avatar"></span>
+                  </div>
+                </div>
+                <!-- dane i ikony -->
+                <div class="small-6 medium-8 large-5 columns">
+                  <div class="dashborad-name-and-icons float-right" >
+                    <p>Jan Kowalski</p>
+                    <!-- ikona widomości -->
+                    <i class="fa fa-envelope" aria-hidden="true" data-open="exampleModal1"></i>
+                    <span class="sr-only">Wiadomość</span>
+                    <!-- alert z ilością wiadomości -->
+                    <div class="amount-of-messages-wrapper">
+                      <span class="amount-of-messages">2</span>
+                    </div>
+                    <!-- wiadomości okno modalne -->
+                    <div class="reveal" id="exampleModal1" data-reveal>
+                      <div class="message-wrapper">
+                        <h1 class="message-modal-header">Wiadomość 1.</h1>
+                        <p class="message-modal-paragraph">Your couch. It is mine.</p>
+                        <p class="message-modal-paragraph">Widomość</p>
+                      </div>
+                      <button class="close-button" data-close aria-label="Zamknij okno modalne" type="button">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <!-- ikona trybika -->
+                    <a href="">
+                      <i class="fa fa-cog fa-spin" aria-hidden="true"></i>
+                      <span class="sr-only">Ustawienia</span>
+                    </a>
+                    <!-- ikona odznaki -->
+                    <img src="img/order.png" alt="obrazek z odznaką">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- menu -->
+          <div class="small-12 medium-4 columns">
+            <div class="nav-container text-center">
+              <nav class="main-menu">
+                <ul>
+                  <li>
+                    <a href="dashboard.html">
+                      <div class="icon-menu">
+                        <img src="img/home.png" alt="ikona dom">
+                      </div>
+                      <div>Home</div>
+                      <div class="half-of-circle-hover">
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <div class="icon-menu">
+                        <img src="img/eyeglass.png" alt="ikona lupa">
+                      </div>
+                     <div>Analizuj</div>
+                     <div class="half-of-circle-hover">
+                     </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="budgets.html">
+                      <div class="icon-menu">
+                        <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                        <span class="sr-only">Planuj oszczędności</span>
+                      </div>
+                      <div>Planuj</div>
+                      <div class="half-of-circle-hover">
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <div class="icon-menu">
+                        <img src="img/money-menu.png" alt="ikona pieniądze">
+                      </div>
+                      <div>Zarabiaj</div>
+                      <div class="half-of-circle-hover">
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <!-- div ikona wylogowania i wyszukiwania, pole wyszukiwarki -->
+           <div class="small-12 medium-4 columns " >
+            <div class="search-and-logoff-icon " >
+             <ul>
+                <li>
+                  <a href="login.html" class="logoff-icon" title="Wyloguj się">
+                    <!-- ikona wylogowania -->
+                    <i class="fa fa-power-off" aria-hidden="true"></i>
+                    <span class="sr-only">Wyloguj się</span>
+                  </a>
+                </li>
+                 <li>
+                  <button class="search-icon ">
+                    <!-- ikona wyszukiwania -->
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                      <span class="sr-only">Wyszukaj</span>
+                  </button>
+                </li>
+                <li>
+                  <!-- pole wyszukiwarki -->
+                  <input class="input-search" type="text" name="search" aria-label="Wpisz w wyszukiwarkę">
+                </li>
+            </ul>
+           </div>
+          </div>
+        </div>
+      </header>
+      <section class="gamification-section one-section">
+          <div class="row">
+            <div class="small-12 medium-8 columns">
+              <h1>Grywalizacja</h1>
+              <div class="row">
+                <div class="small-12 medium-4 columns" >
+                  <span>Miejsce w rankingu</span>
+                  <p><span class="ranking-place">100</span></p>
+                </div>
+                <div class="small-12 medium-4 columns">
+                  <span>Zadanie wykonane</span>
+                  <p><span class="number-of-tasks">1</span> z 18</p>
+                </div>
+                <div class="small-12 medium-4 columns">
+                  <span>Zdobyte odznaki</span>
+                  <p><span class="number-of-orders">1</span> z 36</p>
+                </div>
+              </div>
+            </div>
+            <!-- przyciski -->
+            <div class="small-12 medium-4 columns">
+              <div class="btn-wrapper text-center">
+                <span class="text_wrapper">Pokaż</span>
+                <button class="button blue-button section-button">Wszytskie</button>
+                <button class="button grey-button section-button">Nieukończone</button>
+              </div>
+            </div>
+           </div> 
+      </section>
+      <section class="discover-possibilities-section">
+        <div class="row">
+          <div class="small-12 columns">
+            <h2><strong>Odkryj</strong> zaskakujące możliwości swojego konta</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 columns">
+            <div class="box-container">
+              <ul>
+                <li class="finished">
+                  <div class="single-box active-box first-log">
+                    <div class="single-box-inner">
+                      <div class="single-box-content">
+                        <div class="icon-wrapper">
+                          <span class="number-of-percent"></span>
+                          <i class="fa fa-check" aria-hidden="true"></i>
+                          <span class="sr-only">Sprawdzony</span>
+                        </div>
+                        <div class="text-wrapper-bottom">
+                          <span>Pierwsze logowanie</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                   <div class="single-box inactive-box expense-management">
+                    <div class="single-box-inner">
+                      <div class="single-box-content">
+                        <div class="icon-wrapper">
+                          <span class="number-of-percent">0%</span>
+                          <i class="fa fa-check" aria-hidden="true"></i>
+                          <span class="sr-only">Sprawdzony</span>
+                           <button class="lock-button" aria-label="przycisk kłódka" type="button">
+                            <img src="img/lock.png" alt="obrazek z kłódką">
+                          </button>
+                        </div>
+                        <div class="text-wrapper-bottom">
+                          <span>Zarządzanie wydatkami</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 </li>
+                  <li>
+                   <div class="single-box inactive-box budget-management">
+                    <div class="single-box-inner">
+                      <div class="single-box-content">
+                        <div class="icon-wrapper">
+                          <span class="number-of-percent">0%</span>
+                          <i class="fa fa-check" aria-hidden="true"></i>
+                          <span class="sr-only">Sprawdzony</span>
+                        </div>
+                        <div class="text-wrapper-bottom">
+                          <span>Zarządzanie budżetem</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 </li>
+                  <li>
+                   <div class="single-box active-box savings-targets">
+                    <div class="single-box-inner">
+                      <div class="single-box-content">
+                        <div class="icon-wrapper">
+                          <span class="number-of-percent">10%</span>
+                          <i class="fa fa-check" aria-hidden="true"></i>
+                          <span class="sr-only">Sprawdzony</span>
+                        </div>
+                        <div class="text-wrapper-bottom">
+                         <span>Cele oszczędnościowe</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 </li>
+                  <li>
+                   <div class="single-box active-box personal-settings">
+                    <div class="single-box-inner">
+                      <div class="single-box-content">
+                        <div class="icon-wrapper">
+                          <span class="number-of-percent">48%</span>
+                          <i class="fa fa-check" aria-hidden="true"></i>
+                          <span class="sr-only">Sprawdzony</span>
+                        </div>
+                        <div class="text-wrapper-bottom">
+                          <span>Ustawienia osobiste</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 </li>
+                  <li>
+                   <div class="single-box inactive-box adding-banks">
+                    <div class="single-box-inner">
+                      <div class="single-box-content">
+                        <div class="icon-wrapper">
+                          <span class="number-of-percent">0%</span>
+                          <i class="fa fa-check" aria-hidden="true"></i>
+                          <span class="sr-only">Sprawdzony</span>
+                        </div>
+                        <div class="text-wrapper-bottom">
+                          <span>Dodawanie banków</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="use-as-you-like-section">
+        <div class="row">
+          <div class="small-12 columns">
+            <h2><strong>Korzystaj</strong> tak jak lubisz i zbieraj odznaki transakcyjne</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 columns">
+            <div class="box-container second">
+              <ul>
+                <li class="finished">
+                   <div class="single-box active-box regular-log">
+                    <div class="single-box-inner">
+                      <div class="single-box-content">
+                        <div class="icon-wrapper star-wrapper">
+                            <span class="number-of-percent"></span>
+                            <i class="fa fa-check" aria-hidden="true"></i>
+                            <span class="sr-only">Sprawdzony</span>
+                            <div class="stars">       
+                              <img src="img/white-star.png" alt="biała gwiazdka"> 
+                              <img src="img/white-star.png" alt="biała gwiazdka">
+                              <img src="img/white-star.png" alt="biała gwiazdka">
+                            </div>  
+                        </div>
+                        <div class="text-wrapper-bottom">
+                          <span>Zarządzanie wydatkami</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 </li>
+                 <li class="not-finished">
+                   <div class="single-box active-box smart-savings">
+                    <div class="single-box-inner">
+                      <div class="single-box-content">
+                        <div class="icon-wrapper star-wrapper">
+                            <span class="number-of-percent">76%</span>
+                            <i class="fa fa-check" aria-hidden="true"></i>
+                            <span class="sr-only">Sprawdzony</span>
+                            <div class="stars">       
+                              <img src="img/white-star.png" alt="biała gwiazdka"> 
+                              <img src="img/white-star.png" alt="biała gwiazdka">
+                            </div>  
+                        </div>
+                        <div class="text-wrapper-bottom">
+                          <span>Sprytne oszczędzanie</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 </li>
+                  <li class="not-finished">
+                   <div class="single-box inactive-box secend-inactive">
+                    <div class="single-box-inner">
+                      <div class="single-box-content">
+                        <div class="icon-wrapper star-wrapper">
+                          <span class="number-of-percent"></span>
+                          <i class="fa fa-check" aria-hidden="true"></i>
+                          <span class="sr-only">Sprawdzony</span>
+                          <div class="stars grey-star">       
+                              <img src="img/grey-star.png" alt="szara gwiazdka"> 
+                          </div>
+                        </div>
+                        <div class="text-wrapper-bottom">
+                          <span>Zapraszanie znajomych</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 </li>
+                 <li class="not-finished">
+                   <div class="single-box inactive-box secend-inactive">
+                    <div class="single-box-inner">
+                      <div class="single-box-content">
+                        <div class="icon-wrapper star-wrapper">
+                          <span class="number-of-percent"></span>
+                          <i class="fa fa-check" aria-hidden="true"></i>
+                          <span class="sr-only">Sprawdzony</span>
+                          <div class="stars grey-star">       
+                              <img src="img/grey-star.png" alt="szara gwiazdka"> 
+                          </div>
+                        </div>
+                        <div class="text-wrapper-bottom">
+                          <span>Tagowanie transkacji</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 </li>
+                 <li class="not-finished">
+                   <div class="single-box inactive-box secend-inactive">
+                    <div class="single-box-inner">
+                      <div class="single-box-content">
+                        <div class="icon-wrapper star-wrapper">
+                          <span class="number-of-percent"></span>
+                          <i class="fa fa-check" aria-hidden="true"></i>
+                          <span class="sr-only">Sprawdzony</span>
+                          <div class="stars grey-star">       
+                              <img src="img/grey-star.png" alt="szara gwiazdka"> 
+                          </div>
+                        </div>
+                        <div class="text-wrapper-bottom">
+                          <span>Lokaty</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 </li>
+                 <li class="not-finished">
+                   <div class="single-box inactive-box secend-inactive">
+                    <div class="single-box-inner">
+                      <div class="single-box-content">
+                        <div class="icon-wrapper star-wrapper">
+                          <span class="number-of-percent"></span>
+                          <i class="fa fa-check" aria-hidden="true"></i>
+                          <span class="sr-only">Sprawdzony</span>
+                          <div class="stars grey-star">       
+                              <img src="img/grey-star.png" alt="szara gwiazdka"> 
+                          </div>
+                        </div>
+                        <div class="text-wrapper-bottom">
+                          <span>Import danych</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 </li>
+                 <li class="not-finished">
+                   <div class="single-box inactive-box secend-inactive">
+                    <div class="single-box-inner">
+                      <div class="single-box-content">
+                        <div class="icon-wrapper star-wrapper">
+                          <span class="number-of-percent"></span>
+                          <i class="fa fa-check" aria-hidden="true"></i>
+                          <span class="sr-only">Sprawdzony</span>
+                          <div class="stars grey-star">       
+                              <img src="img/grey-star.png" alt="szara gwiazdka"> 
+                          </div>
+                        </div>
+                        <div class="text-wrapper-bottom">
+                          <span>Transakcje kartą</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 </li>
+                 <li class="not-finished">
+                   <div class="single-box inactive-box secend-inactive">
+                    <div class="single-box-inner">
+                      <div class="single-box-content">
+                        <div class="icon-wrapper star-wrapper">
+                          <span class="number-of-percent"></span>
+                          <i class="fa fa-check" aria-hidden="true"></i>
+                          <span class="sr-only">Sprawdzony</span>
+                          <div class="stars grey-star">       
+                              <img src="img/grey-star.png" alt="szara gwiazdka"> 
+                          </div>
+                        </div>
+                        <div class="text-wrapper-bottom">
+                          <span>Personalizacja</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 </li>
+                 <li class="not-finished">
+                   <div class="single-box inactive-box secend-inactive">
+                    <div class="single-box-inner">
+                      <div class="single-box-content">
+                        <div class="icon-wrapper star-wrapper">
+                          <span class="number-of-percent"></span>
+                          <i class="fa fa-check" aria-hidden="true"></i>
+                          <span class="sr-only">Sprawdzony</span>
+                          <div class="stars grey-star">       
+                              <img src="img/grey-star.png" alt="szara gwiazdka"> 
+                          </div>
+                        </div>
+                        <div class="text-wrapper-bottom">
+                          <span>Zakupy online</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 </li>
+                 <li class="not-finished">
+                   <div class="single-box inactive-box secend-inactive">
+                    <div class="single-box-inner">
+                      <div class="single-box-content">
+                        <div class="icon-wrapper star-wrapper">
+                          <span class="number-of-percent"></span>
+                          <i class="fa fa-check" aria-hidden="true"></i>
+                          <span class="sr-only">Sprawdzony</span>
+                          <div class="stars grey-star">       
+                              <img src="img/grey-star.png" alt="szara gwiazdka"> 
+                          </div>
+                        </div>
+                        <div class="text-wrapper-bottom">
+                          <span>Kredyty</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 </li>
+                 <li class="not-finished">
+                   <div class="single-box inactive-box secend-inactive">
+                    <div class="single-box-inner">
+                      <div class="single-box-content">
+                        <div class="icon-wrapper star-wrapper">
+                          <span class="number-of-percent"></span>
+                          <i class="fa fa-check" aria-hidden="true"></i>
+                          <span class="sr-only">Sprawdzony</span>
+                          <div class="stars grey-star">       
+                              <img src="img/grey-star.png" alt="szara gwiazdka"> 
+                          </div>
+                        </div>
+                        <div class="text-wrapper-bottom">
+                          <span>Przelewy zdefiniowane</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+    </div>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/what-input/what-input.js"></script>
+    <script src="bower_components/foundation-sites/dist/foundation.js"></script>
+    <script src="js/app.js"></script>
+    <!-- jquery UI -->
+    <script
+        src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+        integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+        crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+header {
+	max-width: 100%;
+	background: $main-color;
+	height: 120px;
+	color: $white-color;
+	@include breakpoint(small only) {
+		height: auto;
+		padding: 25px 0 40px 0;
+	}
+	.header-data-content{
+		padding-top: 25px;
+		@include breakpoint(medium only) {
+			padding-top: 35px;
+		}
+	}
+}
+
+//zdjęcie logo i avatara
+.logo_avatar {
+	img{
+		@include size(80px,80px);
+	    @include breakpoint(small only) {
+ 					 @include size(70px,70px);
+	       			}
+	}
+	.logo{
+		@include breakpoint(medium only) {
+ 					 display: none;
+	       }
+		}
+	.avatar{
+		@include breakpoint(medium only) {
+	 					 margin-left:15px;
+	 					 @include size(55px,55px);
+		       }
+		}
+	}
+
+
+//ikona koperty i trybika, dane użytkownika
+.dashborad-name-and-icons {
+  		position: relative;
+	   p {
+			 font-size: 25px;
+			 @include breakpoint(medium only) {
+			 	font-size: $basic-font-size;
+			 	margin: 0;		
+		  	}
+	   	}
+	   i {
+		  margin-right: 10px;
+		  font-size: 17px;
+		  cursor: pointer;
+	   	 }
+
+	   	// trybik obroty
+	   .fa-cog{
+	   	 	@include secondTransition;
+	   	 	color: $white-color;
+	   	 &:hover{
+	   	 	//-ms-transform: rotate(360deg) scale(2,2); /* IE 9 */
+		    //-webkit-transform: rotate(360deg) scale(2,2); /* Chrome, Safari, Opera */
+		    //transform:  scale(2,2);
+		    color: $second-pink-color;
+		    margin-left: 6px;
+			margin-right: 8px;
+			font-size: 25px;
+	   	 }
+	   }
+	    img{
+	   		@include size(21px,24px);
+	   }
+
+}
+
+	
+	   
+   //alert z ilością wiadomości nad kopertą
+   .amount-of-messages-wrapper{
+   	 @include size(22px,22px);
+   	 line-height: 22px;
+   	 background: $second-pink-color;
+   	 position: absolute;
+   	 top: 29px;
+	 left: 7px;
+   	 text-align: center;
+   	 display: block;
+   	 cursor: pointer;
+   	 @include borderRadiusSingle(50%);
+   	 @include secondTransition;
+   	 @include breakpoint(medium only) {
+ 		@include size(16px,16px);
+ 		line-height: 16px;
+ 		top: 19px;				
+	       				}
+   	 .amount-of-messages{
+   	 	color: $white-color;
+   	 	font-weight: bold;
+   	 	padding: auto 0;
+   	 	
+   	 	 @include breakpoint(medium only) {
+ 			font-size: 12px;
+
+	       	}
+   	 	}
+   }
+
+
+   // okno modalne wiadomość
+   .reveal{
+	   	-moz-box-shadow: 5px 5px 3px rgba(0,0,0,0.5);
+		-webkit-box-shadow: 5px 5px 3px rgba(0,0,0,0.5);
+		box-shadow: 5px 5px 3px rgba(0,0,0,0.5);
+	   }
+   .message-wrapper{
+   	
+   		.message-modal-paragraph {
+   			padding: 10px 0 0 10px;
+   			color: $black-color !important;
+   		}
+   		.message-modal-header{
+   			padding: 10px 0 5px 10px;
+   			color: $black-color  !important;
+   		}
+
+   }
+   		
+//nawigacja czyli menu główne
+.main-menu {
+	display: block;
+		ul{
+			margin: 0;
+			list-style: none;
+			li{
+				
+				display: block;
+				float: left;
+				@include breakpoint(small only) {
+ 					 float: none;
+	       				}
+				a{
+					color: $basic-text-color;
+					padding: 23px 0px 79px 87px;
+					@include basicTransition;
+					@include breakpoint(medium only) {
+ 					  	padding: 23px 0px 79px 53px;
+	       				}
+	       			@include breakpoint(small only) {
+	       			 	padding: 3px 0px 94px 100%;
+	       			
+	       				}
+					margin: 0;
+					overflow: auto;
+					.half-of-circle-hover{
+						//display: none;
+						@include basicTransition;
+						opacity: 0;
+						background: $black-color;
+						@include size(20px,20px);
+						@include borderRadiusSingle(50%);
+						margin: 13px auto 0;
+
+
+					}
+				  	
+					  	&:hover{
+						  	background: $black-color;
+						  	.half-of-circle-hover{
+						  		//display: block;
+						  		opacity: 1;
+						  		}
+						}					
+		 					
+					  i{
+					  	color: $basic-text-color;
+					  	font-size: 23px;
+					  	@include breakpoint(small only) {
+						 	font-size: 43px; 
+				    	}
+					  
+					  }
+					  img{
+				    		@include size(31px,26px);
+				    		@include breakpoint(small only) {
+						 		@include size(49px,43px);
+				    		}
+				    	}
+					 
+				 	}
+
+				}
+				
+			}
+		}
+
+
+
+.search-and-logoff-icon{
+	margin-top: 30px;
+	ul{
+
+		list-style-type: none;
+		margin: 0;
+		
+		li{
+			display: inline-block;
+			float: right;
+			@include breakpoint(small only) {
+			 	 width: 100%;
+                 text-align: center
+	    	}
+			//pole wyszukiwarki
+			.input-search{
+				margin-top: 16px;
+				@include breakpoint(medium only) {
+					width: 140px;
+	    		}
+				
+			}
+
+			i{
+              	font-size: 23px;
+		        padding: 20px 16px;
+		        @include breakpoint(medium only) {
+					padding: 23px 8px;
+					font-size: 16px;
+
+	    		}
+	    		@include breakpoint(small only) {	
+					font-size: 37px;
+
+	    		}
+			}
+			// ikona wylgowania
+			a .fa-power-off{
+					color: $pink-log-off-color;
+					border-left: 1px solid #64d4e1;
+					 @include breakpoint(small only) {
+						border: none;
+
+	    		}
+			}
+		}
+	}
+}
+
+
+
+
