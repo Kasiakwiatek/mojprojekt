@@ -1,65 +1,72 @@
-.budgets-section{
-
+.chart-container{
+  overflow: auto;
+  padding: 30px 0;
+  li{
+  	padding-right: 106px !important;
+  	padding-bottom: 44px !important;
+  }
 	.chart-box{
-		margin-top: 10px;
-		width: 285px;
-		height: 285px;
+		margin-top: 10px;		
+		width: 284px;
+		height: 284px;
 		border-radius: 50%;
 		background: $white-color;
 		position: relative;
 		.circle-inside-chart{
-			width: 188px;
-			height: 188px;
+			width: 190px;
+			height: 190px;
 			position: absolute;
-			top: 50px;
-			left: 50px;
+			top: 48px;
+			left: 48px;
 			border-radius: 50%;
 			background:  $grey-background-color;
+			.text-container{
+				text-align:center;
+			    position: absolute;
+			    width: 100%;
+			    top: 40px;
+			}
 		}
 	}
 		.item {
-    position: absolute;
-   	top: -50px;
-	left: -50px;
+		    position: absolute;
+		   	top: 0px;
+			left: 0px;
+			
+		}
+
+
+
+	svg {
+	    transform: rotate(-75deg);
+	}
+
+	.circle_animation {
+	  stroke-dasharray: 440;
+	  stroke-dashoffset: 440;
+	}
+
+	.circle .circle_animation {
+	    -webkit-animation: html 1s ease-out forwards;
+	    animation: html 1s ease-out forwards;
+	}
+
+	
+
+	@-webkit-keyframes html {
+	  to {
+	    stroke-dashoffset: 180;
+	  }
+	}
+
+	@keyframes html {
+	  to {
+	    stroke-dashoffset: 180;
+	  }
+	}
 
 }
 
-.item h2 {
-    text-align:center;
-    position: absolute;
-    line-height: 125px;
-    width: 100%;
-}
-
-svg {
-    transform: rotate(-90deg);
-}
-
-.circle_animation {
-  stroke-dasharray: 700;
-  stroke-dashoffset: 700;
-}
-
-.html .circle_animation {
-    -webkit-animation: html 1s ease-out forwards;
-    animation: html 1s ease-out forwards;
-}
-
-.css .circle_animation {
-    -webkit-animation: css 1s ease-out forwards;
-    animation: css 1s ease-out forwards;
-}
-
-@-webkit-keyframes html {
-  to {
-    stroke-dashoffset: 80;
-  }
-}
-
-@keyframes html {
-  to {
-    stroke-dashoffset: 80;
-  }
-}
-
+.date-picker{
+	|overflow: auto;
 }

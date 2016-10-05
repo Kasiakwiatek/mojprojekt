@@ -95,10 +95,29 @@ $(document).ready(function() {
               },
               success: function(response) {
                
-               addHistoryItem(response);
+                addHistoryItem(response);   
 
               }
+             
         });
+
+  $.ajax({
+              type: "GET",
+              url: "https://efigence-camp.herokuapp.com/api/data/history",
+
+              error: function(response) {
+                alert("Błąd nie ma połączenia z API");
+
+              },
+              success: function(msg) {
+               
+               showChart(msg); 
+
+              }
+             
+        });
+
+
      }
 
     getAjax();
@@ -111,6 +130,7 @@ $(document).ready(function() {
                         var year = date.getFullYear();
                         var month = date.getMonth();
                         var day = date.getDate();
+                        var amount = response.content[i].amount;
                         month= month+1;
                         if (month<10){
                             month = "0" + month;     
@@ -146,6 +166,8 @@ $(document).ready(function() {
                      
 
                        $(".history-list").append(text);
+                       showChart(amount);
+                       
                     }
                   }       
 
@@ -207,5 +229,90 @@ $(document).ready(function() {
           event.preventDefault(); 
           $(this).parents("li").toggleClass("checked").find("i").toggleClass("fa-check");
         });
+
+      
+    // function getChartData(amount){
+     // var arryofamount =[];
+      // for 
+       //}
+     function showChart(msg) {
+          var hightchart = {
+       chart: {
+            type: 'area'
+        },
+        title: {
+            text: ''
+        },
+        subtitle: {
+            text: '' 
+        },
+        xAxis: {
+            allowDecimals: false,
+            labels: {
+                formatter: function () {
+                    return this.value; // clean, unformatted number for year
+                }
+            }
+        },
+        yAxis: {
+            title: {
+                text: ''
+            },
+            labels: {
+                formatter: function () {
+                    return this.value + ' PLN';
+                }
+            }
+        },
+        tooltip: {
+            pointFormat: '{series.name} produced <b>{point.y:,.0f}</b><br/>warheads in {point.x}'
+        },
+        plotOptions: {
+            area: {
+                pointStart: 0,
+                marker: {
+                    enabled: false,
+                    symbol: 'circle',
+                    radius: 2,
+                    states: {
+                        hover: {
+                            enabled: true
+                        }
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'bebeb',
+            data : []
+        }]
+      };
+       console.log(msg.content);
+       for(var i=0; i< msg.content.length; i++){
+          hightchart.series[0].data[i]= msg.content[i].amount;
+     
+       }
+
+       $('#container').highcharts(hightchart);
+    };
+showChart();
+
+ function showDate(){
+   $('.date-picker').datepicker( {
+        changeMonth: true,
+        changeYear: true,
+        showButtonPanel: true,
+        dateFormat: 'MM yy',
+        onClose: function(dateText, inst) { 
+            $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
+        }
+    });
+ }
+
+  showDate();
+   
+
+ 
+
 
 });
